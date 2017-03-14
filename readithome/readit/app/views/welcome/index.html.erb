@@ -1,0 +1,18 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<%# count 1 to 10 %>
+<%= "Count to 10" %>
+<br />
+<% 11.times do |i| %>
+	<%= i %>
+<% end -%>
+<br /><br />
+<%= link_to("Go to Sample",
+ 		{:action => 'sample'}) %>
+
+<% if (params.has_key?(:id) &&
+  	   params.has_key?(:random)) %><br />
+		<%= "ID : #{params[:id]}"%><br />
+		<%= "RANDOM : #{params[:random]}"%><br />
+<% end %>
